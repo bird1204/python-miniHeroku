@@ -1,0 +1,10 @@
+<!doctype html>
+<title>Upload project.tar.gz</title>
+{% if name %}
+  <h1>Hello {{ name }} !, Upload yourApp.tar.gz</h1>
+{% endif %}
+
+<form action="{{ url_for('create') }}" method="POST" enctype="multipart/form-data">
+  <input type="file" name="file">
+  <input type="submit" value="上傳">
+</form>
